@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-body" style="align-items: unset;">
+    <div class="container has-text-centered">
+        <div class="columns">
+            <div class="column is-10 is-offset-1">
+                <div class="content is-medium">
+                    <h1 class="title">{{ post.title }}</h1>
+                    <h2 class="is-size-4 has-text-primary">{{ post.pub_date.strftime('%Y-%m-%d %H:%M') }}</h2>
+                    <figure class="image is-16by9">
+                        {% if post.img_name %}
+                            <img src="/static/images/{{ post.img_name }}" alt="{{ post.img_name }}">
+                        {% else %}
+                            <img src="http://placehold.jp/800x450.png" alt="">
+                        {% endif %}
+                    </figure>
+                    <p class="has-text-left">{{ post.content }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

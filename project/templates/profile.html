@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-body">
+  <div class="container has-text-centered">
+    <div class="columns has-same-height is-gapless">
+      <div class="column">
+        <!-- Profile -->
+        <div class="card">
+          <div class="card-content">
+            <h3 class="title is-4">Profile</h3>
+
+            <div class="content">
+              <table class="table-profile">
+                <tr>
+                  <th colspan="1"></th>
+                  <th colspan="2"></th>
+                </tr>
+                <tr>
+                  <td>Name:</td>
+                  <td>{{ username }}</td>
+                </tr>
+                <tr>
+                  <td>Email:</td>
+                  <td>{{ email }}</td>
+                </tr>
+              </table>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
